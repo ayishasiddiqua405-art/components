@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-sample</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <style>
+        body {
+            background-color: rgb(250, 247, 247);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: rgb(51, 140, 241);
+        }
+
+        .text-box {
+            padding: 15px;
+            margin: 20px;
+            width: 250px;
+            height: 500px;
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            border: 2px solid;
+            box-shadow: 0 4px 8px;
+
+
+        }
+
+        h2 {
+            font-size: 20px;
+            color: rgb(241, 51, 83);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: rgb(249, 77, 163);
+        }
+
+        .button {
+            padding: 10px;
+            margin: 0;
+            border: 0;
+            border-radius: 10px;
+            background-color: rgb(51, 140, 241);
+
+        }
+
+        .button-h2 {
+            padding: 10px;
+            margin: 0;
+            border: 0;
+            border-radius: 10px;
+            background-color: rgb(241, 51, 83);
+            margin-top: 130px;
+
+        }
+
+        .button-3 {
+            padding: 10px;
+            margin: 0;
+            border: 0;
+            border-radius: 10px;
+            background-color: rgb(249, 77, 163);
+            margin-top: 130px;
+        }
+
+        .button:hover,
+        .button-h2:hover, .button-3:hover {
+            opacity: 0.9;
+        }
+    </style> -->
+
+
+    <style>
+    body {
+        background-color: rgb(250, 247, 247);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap; /* IMPORTANT */
+        padding: 20px;
+    }
+
+    .text-box {
+        padding: 15px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+
+    h1 {
+        font-size: 20px;
+        color: rgb(51, 140, 241);
+    }
+
+    h2 {
+        font-size: 20px;
+        color: rgb(241, 51, 83);
+    }
+
+    h3 {
+        font-size: 20px;
+        color: rgb(249, 77, 163);
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Buttons */
+    .button,
+    .button-h2,
+    .button-3 {
+        padding: 10px;
+        border: 0;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        margin-top: auto; /* Push button to bottom */
+    }
+
+    .button {
+        background-color: rgb(51, 140, 241);
+    }
+
+    .button-h2 {
+        background-color: rgb(241, 51, 83);
+    }
+
+    .button-3 {
+        background-color: rgb(249, 77, 163);
+    }
+
+    .button:hover,
+    .button-h2:hover,
+    .button-3:hover {
+        opacity: 0.9;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+        .text-box {
+            width: 90%;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        body {
+            padding: 10px;
+        }
+
+        h1, h2, h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <section class="text-box">
+        <i class="fa fa-facebook-f" style="font-size:48px;color:rgb(51, 140, 241)"></i>
+        <h1>Facebook</h1>
+        <P> Community and Diverse Formats
+            Facebook is the most versatile platform, supporting nearly every content type for a broad global audience.
+            Groups & Community: A primary hub for niche interest groups (e.g., cooking, local news, hobbyist forums).
+            Mixed Media: High engagement on static images, long-form text (informative/how-to), and Live broadcasts.
+            AI Discovery: In 2025, up to 50% of the feed comes from "unconnected sources" based on AI-predicted
+            interests.</P>
+        <button class="button">read more</button>
+
+    </section>
+
+    <section class="text-box">
+        <i class="fa fa-youtube-play" style="font-size:48px;color:rgb(255, 4, 4)"></i>
+        <h2>YouTube </h2>
+        <P> 2.53 billion to 2.58 billion users
+            As a video-first platform and the world’s second-largest search engine, YouTube leads in user time spent and
+            is
+            the primary destination for long-form educational and entertainment content.</P>
+
+        <button class="button-h2">read more</button>
+    </section>
+
+    <section class="text-box">
+        <i class="fa fa-instagram" style="font-size:48px;color:rgb(249, 77, 163)"></i>
+        <h3>Instagram </h3>
+        <p> 3.0 billion users (estimated)
+            Highly visual and popular among Gen Z and Millennials, Instagram focuses on storytelling through photos,
+            Stories, and Reels. Some reports now place its user base neck-and-neck with WhatsApp at the 3 billion mark.
+        </p>
+        <button class="button-3">read more</button>
+    </section>
+
+</body>
+
+</html>
