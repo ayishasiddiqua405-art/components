@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            padding: 10px 20px;
+            min-height: 60px;
+            margin: 0;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgb(77, 73, 73);
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        header li {
+            list-style: none;
+            padding: 10px 20px;
+            margin: 0%;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: rgb(241, 241, 241);
+            font-size: 14px;
+        }
+
+        header li a:hover {
+            color: rgb(240, 212, 0);
+        }
+
+        #imglogo img {
+            width: 100px;
+        }
+
+        /* Hero section */
+        .cake-img {
+            position: relative;
+        }
+
+        .cake-img img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        /* Hide submenu */
+        .dropdown-menu {
+            position: absolute;
+            top: 80%;
+            left: 0;
+            background-color: rgb(77, 73, 73);
+            display: none;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 13px;
+            min-width: 320px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        /* Submenu items */
+        .dropdown-menu li {
+            padding: 10px 15px;
+        }
+
+        .dropdown-menu li a {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Show submenu on hover */
+        .dropdown:hover .dropdown-menu {
+            display: grid;
+        }
+
+        /* Optional hover effect */
+        .dropdown-menu li:hover {
+            background-color: rgb(100, 96, 96);
+        }
+
+        .mobile-header {
+            display: none;
+            padding: 15px 20px;
+            font-size: 20px;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-box {
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 40px;
+        }
+
+        span {
+            margin-top: 10px;
+        }
+
+        .div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-box img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .button {
+            width: 250px;
+            padding: 10px;
+            border: 0;
+            border-radius: 10px;
+            background-color: rgb(100, 96, 96);
+        }
+
+        .button:hover {
+            color: rgb(240, 212, 0);
+        }
+
+        #bk-contactus {
+            margin: 10px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgb(100, 96, 96);
+        }
+
+        .contact-div {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .span {
+            margin-left: 10px;
+        }
+
+        .span:hover {
+            color: rgb(253, 249, 249);
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon {
+            font: 18px;
+        }
+
+        .icon:hover {
+            color: rgb(253, 249, 249);
+        }
+
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .mobile-header {
+                display: block;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            .nav-menu {
+                display: none;
+                /* hidden by default */
+                width: 100%;
+                flex-direction: column;
+                transition: all 0.3s ease;
+            }
+
+            .nav-menu.show {
+                display: flex;
+                /* shown on click */
+            }
+
+            header ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            header li {
+                width: 100%;
+                text-align: left;
+            }
+
+            #imglogo {
+                display: none;
+            }
+
+            .dropdown-menu {
+                padding: 10px;
+                display: none;
+                position: relative;
+                min-width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .dropdown-menu li {
+                width: 50%;
+
+            }
+
+            .dropdown-menu.show {
+                display: flex;
+            }
+
+            .cake-img {
+                width: 100%;
+            }
+
+            .content h1 {
+                font-size: 22px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+
+            .text-box img {
+                width: 50%;
+            }
+
+            .div {
+                justify-content: center;
+            }
+
+            .text-box {
+                padding: 10px;
+                /* min-width: 100%; */
+                flex-direction: column;
+            }
+
+            .text-boximg {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button,
+            .button:hover {
+                width: 50%;
+                align-items: center;
+                color: rgb(240, 212, 0);
+            }
+
+            #bk-contactus{
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <i class="fa fa-bars menu-btn mobile-header"></i>
+
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#Products">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Brownies</a></li>
+                        <li><a href="#">Breads</a></li>
+                        <li><a href="#">Desserts & Cupcakes</a></li>
+                        <li><a href="#">Cakes</a></li>
+                        <li><a href="#">Biscults, Cookies & Crackers</a></li>
+                        <li><a href="#">Pastries</a></li>
+                        <li><a href="#">Sanwiches & Savouries</a></li>
+                        <li><a href="#">Combos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="customcake.html">Customcakes</a></li>
+
+
+                <div id="imglogo">
+                    <img src="./img/b-logo.png" alt="logo">
+                </div>
+
+                <li><a href="findus.html">Find us</a></li>
+                <li><a href="franchise-enquiry.html">Franchise enquiry</a></li>
+                <li><a href="bk-contactus.html">Contact US</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="bk-contactus" class="contact-div">
+
+        <div>
+            <img src="./img/b-logo.png" width="250px" alt="logo">
+        </div>
+        <div class="contact-span">
+            <i class="fa fa-map-marker" style="font-size:16px"></i><span class="span">Periyar bus stand road,
+                Periyar, Madurai
+                main, Madurai, Tamil Nadu 625001</span>
+        </div>
+        <div class="contact-span">
+            <i class="fa fa-envelope" style="font-size:16px"></i><span class="span">suppoert@bakefresh.in</span>
+        </div>
+        <div class="contact-span">
+            <i class="fa fa-phone" style="font-size:16px"></i><span class="span">9876543210</span>
+        </div>
+
+    </section>
+
+</body>
+<script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navMenu = document.querySelector(".nav-menu");
+    const dropdownLink = document.querySelector(".dropdown > a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+    dropdownLink.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // stop link jump
+            dropdownMenu.classList.toggle("show");
+        }
+    });
+
+
+</script>
+
+<footer id="bk-contactus">
+    <div class="footer">
+        <div class="icon"> <i class="fa fa-copyright" style="font-size:24px"></i>
+        </div>
+
+        <div class="icon"> <i class="fa fa-facebook-square" style="font-size:24px"></i> </div>
+
+        <div class="icon"> <i class="fa fa-instagram" style="font-size:24px"></i> </div>
+
+        <div class="contact-span">
+            <i class="fa fa-envelope" style="font-size:16px"></i><span class="span">suppoert@bakefresh.in</span>
+        </div>
+
+        <div class="contact-span">
+            <i class="fa fa-phone" style="font-size:16px"></i><span class="span">9876543210</span>
+        </div>
+    </div>
+</footer>
+
+</html>
